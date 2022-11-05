@@ -1,0 +1,23 @@
+<html>
+<head>
+<title>Prestamo:</title>
+<script language="JavaScript" type="text/javascript">
+    function prestamo(){
+    var xmeses=prestamo.meses.value;
+    var monto = 100.00;
+    var xintereses = monto * (xmeses * 0.02);
+    var xtotalp = monto + xintereses;
+    document.getElementById('interes').value=parseFloat(xintereses);
+    document.getElementById('totalp').value=parseFloat(xtotalp);
+}
+</script>
+</head>
+<body>
+<form name="Prestamo">
+    CANTIDAD DE PRESTAMO : <input name="meses" type="text" > <br>
+    <br><input type="button" value="CALCULAR" onClick="prestamo()" > <br>
+   <br> Cuotas : <input name="interes" id="interes" type="text" > <br>
+    <br>TOTAL PAGAR : <input name="totalp" id="totalp" type="text" > <br>
+</form>
+</body>
+</html>
